@@ -6,4 +6,4 @@ node{
    {
       app = docker.build("siva564/login :${env.BUILD_NUMBER}")
    }
-  
+}
