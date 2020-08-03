@@ -4,6 +4,6 @@ node{
    }
    stage('docker build')
    {
-      docker build -t siva564/siavreddy .
+      docker build -t sivareddy564/siva .
    }
 }
