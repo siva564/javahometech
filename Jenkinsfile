@@ -7,6 +7,10 @@ node{
       def mvnHome =  tool name: 'maven-3', type: 'maven'   
       sh "${mvnHome}/bin/mvn package"
    }
+   stage('docker build')
+   {
+      app = docker.build("siva564/login :${env.BUILD_NUMBER}")
+   }
    stage('Email Notification'){
       mail bcc: '', body: '''Hi Welcome to jenkins email alerts
       Thanks
