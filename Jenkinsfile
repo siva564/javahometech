@@ -4,6 +4,6 @@ node{
    }
    stage('docker build')
    {
-      app = docker.build("siva564/login :${env.BUILD_NUMBER}")
+      app = docker build("siva564/login :${env.BUILD_NUMBER}")
    }
 }
